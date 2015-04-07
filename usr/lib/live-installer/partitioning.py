@@ -14,7 +14,7 @@ import parted
 import commands
 import gettext
 
-gettext.install("live-installer", "/usr/share/linuxmint/locale")
+gettext.install("live-installer", "/usr/share/huayra/locale")
 
 def shell_exec(command):
     return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
@@ -375,7 +375,7 @@ class Partition(object):
             description = ''
             if path_exists(mount_point, 'etc/'):
                 description = getoutput("su -c '{{ . {0}/etc/lsb-release && echo $DISTRIB_DESCRIPTION; }} || \
-                                                {{ . {0}/etc/os-release && echo $PRETTY_NAME; }}' mint".format(mount_point)) or 'Unix'
+                                                {{ . {0}/etc/os-release && echo $PRETTY_NAME; }}' alumno".format(mount_point)) or 'Unix'
             if path_exists(mount_point, 'Windows/servicing/Version'):
                 description = 'Windows ' + {
                     '6.4':'10',

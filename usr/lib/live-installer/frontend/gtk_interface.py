@@ -26,7 +26,7 @@ import webkit
 import string
 import parted
 
-gettext.install("live-installer", "/usr/share/linuxmint/locale")
+gettext.install("live-installer", "/usr/share/huayra/locale")
 gtk.gdk.threads_init()
 
 LOADING_ANIMATION = '/usr/share/live-installer/loading.gif'
@@ -46,8 +46,8 @@ class InstallerWindow:
     def __init__(self, fullscreen=False):
 
         #Disable the screensaver to prevent a segfault situation in GTK2
-        os.system("sudo -u mint gsettings set org.cinnamon.desktop.screensaver lock-enabled false 2> /dev/null")
-        os.system("sudo -u mint gsettings set org.mate.screensaver lock-enabled false 2> /dev/null")
+        os.system("sudo -u alumno gsettings set org.cinnamon.desktop.screensaver lock-enabled false 2> /dev/null")
+        os.system("sudo -u alumno gsettings set org.mate.screensaver lock-enabled false 2> /dev/null")
 
         #Build the Setup object (where we put all our choices)
         self.setup = Setup()
@@ -601,7 +601,7 @@ class InstallerWindow:
             if iter is not None:
                 self.setup.language = model.get_value(iter, 3)
                 self.setup.print_setup()
-                gettext.translation('live-installer', "/usr/share/linuxmint/locale",
+                gettext.translation('live-installer', "/usr/share/huayra/locale",
                                 languages=[self.setup.language, self.setup.language.split('_')[0]],
                                 fallback=True).install()  # Try e.g. zh_CN, zh, or fallback to hardcoded English
                 try:
