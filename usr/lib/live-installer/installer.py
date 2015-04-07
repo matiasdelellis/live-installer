@@ -508,6 +508,7 @@ class InstallerEngine:
 
         # now unmount it
         print " --> Unmounting partitions"
+        os.system("sync")
         os.system("umount --force /target/dev/shm")
         os.system("umount --force /target/dev/pts")
         if setup.gptonefi:
