@@ -1,3 +1,22 @@
+live-installer (2015.10.21) experimental;  urgency=medium
+
+  * Backport algunos cambios de Linux Mint.
+  * Cambia iconos y algunos texto para referirse a Huayra.
+
+ -- Matias De lellis <mati86dl@gmail.com>  Wed, 21 Oct 2015 13:31:59 -0300
+
+live-installer (2015.04.16) unstable; urgency=medium
+
+  * Misc fixes
+
+ -- Matias De lellis <mati86dl@gmail.com>  Thu, 16 Apr 2015 12:53:46 -0300
+
+live-installer (2015.04.07.1) unstable; urgency=medium
+
+  * Misc fixes
+
+ -- Matias De lellis <mati86dl@gmail.com>  Mon, 07 Apr 2015 10:40:12 -0300
+
 live-installer (2015.04.07) unstable; urgency=medium
 
   * Primera version para huayra GNU/Linux
